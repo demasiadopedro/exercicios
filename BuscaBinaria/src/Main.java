@@ -1,13 +1,16 @@
 public class Main {
+
+    interface FactorialNumber{
+        boolean test(int x, int y);
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        int numeros[]= new int[100];
-        for(int i=0; i<100; i++){
-            numeros[i]=i+1;
-            /*System.out.println(numeros[i]);*/
-
+        FactorialNumber isFactor = (x,y)-> (y%x)==0;
+        if(isFactor.test(3,9)){
+            System.out.println("3 é fator de 9");
         }
-        
-
+        else {
+            System.out.println("sla porra");
+        }
     }
 }
